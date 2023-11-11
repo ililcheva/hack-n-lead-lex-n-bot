@@ -11,7 +11,7 @@ from langchain.memory.chat_message_histories import StreamlitChatMessageHistory
 from langchain.vectorstores import Qdrant
 
 TITLE = "LEX'N'BOT"
-api_key = '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'
+api_key = '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'
 url = 'https://api.openai.com/v1/'
 model_name = 'gpt-4'
 embedding_name = 'text-embedding-ada-002'
@@ -46,7 +46,7 @@ identity = """ You are a helpful AI legal assistant having a conversation with a
 
 def create_sources(documents):
     unique_sources = {
-        document.metadata['url']: {'topic': document.metadata['topic'], 'title': document.metadata['url']} for document in documents}
+        document.metadata['url']: {'topic': document.metadata['title'], 'title': document.metadata['url']} for document in documents}
     return '\n' + '\n'.join(
         [f"- [{metadata['topic']} - {metadata['title']}]({topic})" for topic, metadata in unique_sources.items()])
 
