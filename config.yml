@@ -1,6 +1,5 @@
 title: "LEX'N'BOT"
 open_ai_url: 'https://api.openai.com/v1/'
-open_ai_organization: 'org-66N72mGO3XwF80FfTwkYtkqT'
 model_name: 'gpt-3.5-turbo'
 embeddings_model_name: 'text-embedding-ada-002'
 vector_size: 1536

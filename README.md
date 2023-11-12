@@ -37,5 +37,5 @@ docker run -p 6333:6333 \
 4. Once Step 3 has finished successfully, run the Streamlit App:
     - From src/ folder run:
     ```
-    streamlit run app.py -- --api_key <your_openai_api_key> <your_openai_organization>
+    streamlit run app.py -- --api_key <your_openai_api_key> --org <your_openai_organization>
     ```
