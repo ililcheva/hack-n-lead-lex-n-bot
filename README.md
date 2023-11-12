@@ -31,11 +31,11 @@ docker run -p 6333:6333 \
 3. Load Qdrant DB with documents:
     -  From src/ folder run: 
     ``` 
-    python db.py <your_openai_api_key>
+    python db.py <your_openai_api_key> <your_openai_organization>
     ```
 
 4. Once Step 3 has finished successfully, run the Streamlit App:
     - From src/ folder run:
     ```
-    streamlit run app.py -- --api_key <your_openai_api_key>
+    streamlit run app.py -- --api_key <your_openai_api_key> <your_openai_organization>
     ```
