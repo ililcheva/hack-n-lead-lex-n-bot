@@ -8,16 +8,22 @@
 # How to run app:
 
 1. Create virtual environment and install dependencies:
+``` 
+python -m venv llm
 ```
-    -  python -m venv llm
-    -  source llm/bin/activate
-    -  pip install -r requirements.txt
+``` 
+source llm/bin/activate
+```
+``` 
+pip install -r requirements.txt
 ```
 
 2. Start Qdrant DB locally and let it run:
 ```
-    -  docker pull qdrant/qdrant
-    -  docker run -p 6333:6333 \
+docker pull qdrant/qdrant
+```
+``` 
+docker run -p 6333:6333 \
     -v $(pwd)/qdrant_storage:/qdrant/storage:z \
     qdrant/qdrant
 ```
