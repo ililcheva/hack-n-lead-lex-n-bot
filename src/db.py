@@ -11,6 +11,7 @@ from utils import load_config
 
 config = load_config()
 api_key = sys.argv[1]
+org = sys.argv[2]
 collection_name = config['collections'][0]
 
 openai.api_key = api_key
@@ -19,7 +20,7 @@ openai.api_base = config['open_ai_url']
 embeddings_model = OpenAIEmbeddings(
     model=config['embeddings_model_name'],
     openai_api_key=api_key,
-    openai_organization = config['open_ai_organization'],
+    openai_organization=org,
     openai_api_base=config['open_ai_url']
 )
 

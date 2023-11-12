@@ -15,6 +15,7 @@ from prompts import IDENTITY, INITIAL_AI_MESSAGE
 
 config = load_config()
 api_key = parse_args(sys.argv[1:]).api_key
+org = parse_args(sys.argv[1:]).org
 
 client = QdrantClient(host=config['db']['host'], port=config['db']['port'])
 
@@ -29,7 +30,7 @@ openai.api_base = config['open_ai_url']
 embeddings_model = OpenAIEmbeddings(
     model=config['embeddings_model_name'],
     openai_api_key=api_key,
-    openai_organization = config['open_ai_organization'],
+    openai_organization=org,
     openai_api_base=config['open_ai_url']
 )
 

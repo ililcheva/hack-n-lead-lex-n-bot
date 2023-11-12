@@ -18,6 +18,7 @@ def load_config():
 def parse_args(args):
     parser = argparse.ArgumentParser('Lexi')
     parser.add_argument('--api_key', help='OpenAI API Key', required=True)
+    parser.add_argument('--org', help='OpenAI Organization', required=True)
     return parser.parse_args(args)
 
 
